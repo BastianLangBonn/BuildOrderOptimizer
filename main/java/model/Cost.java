@@ -1,4 +1,4 @@
-package data;
+package model;
 
 /**
  * Class representing the costs of something.
@@ -6,10 +6,15 @@ package data;
  * @author Bastian Lang
  *
  */
-public class Costs {
+public class Cost {
 
 	private int cristal;
 	private int gas;
+
+	public Cost(int crystal, int gas) {
+		this.cristal = crystal;
+		this.gas = gas;
+	}
 
 	public int getCristal() {
 		return cristal;

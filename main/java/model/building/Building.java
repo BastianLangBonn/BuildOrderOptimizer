@@ -1,9 +1,8 @@
-package data.building;
+package model.building;
 
 import java.util.List;
 
-import data.Costs;
-import data.unit.Unit;
+import model.Cost;
 
 /**
  * Interface for a building.
@@ -13,12 +12,12 @@ import data.unit.Unit;
  */
 public interface Building {
 
-	public Costs getCosts();
+	public Cost getCosts();
 
 	public int getBuildTime();
 
 	public String getName();
 
-	public List<Unit> getAvailableUnits();
+	public List<String> getAvailableUnits();
 
 }
