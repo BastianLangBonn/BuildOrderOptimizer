@@ -1,6 +1,6 @@
 package model.unit;
 
-import model.Cost;
+import model.Resources;
 
 /**
  * Interface for a unit.
@@ -10,7 +10,7 @@ import model.Cost;
  */
 public interface Unit {
 
-	public Cost getCosts();
+	public Resources getCosts();
 
 	public int getBuildTime();
 
@@ -21,4 +21,9 @@ public interface Unit {
 	public int getArmor();
 
 	public int getSupply();
+
+	/**
+	 * Updates the state of the unit for the next timestep.
+	 */
+	public void update();
 }

@@ -2,7 +2,7 @@ package model.building;
 
 import java.util.List;
 
-import model.Cost;
+import model.Resources;
 
 /**
  * Interface for a building.
@@ -12,7 +12,7 @@ import model.Cost;
  */
 public interface Building {
 
-	public Cost getCosts();
+	public Resources getCosts();
 
 	public int getBuildTime();
 
