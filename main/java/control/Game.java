@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import model.Resources;
 import model.State;
 import model.building.Building;
+import model.unit.ResourceCollector;
 import model.unit.Scv;
 import model.unit.Unit;
 
@@ -34,6 +35,10 @@ public class Game {
 		while (time < 600) {
 			for (Unit unit : state.getUnits()) {
 				unit.update();
+				if (unit instanceof ResourceCollector) {
+					ResourceCollector collector = (ResourceCollector) unit;
+					state.addResources(collector.getCollectedResourcesThisTurn());
+				}
 			}
 			System.out.println(String.format("State at time %d: %s", time, state.toString()));
 			time += 1;

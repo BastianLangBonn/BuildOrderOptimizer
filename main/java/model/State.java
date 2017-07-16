@@ -71,4 +71,11 @@ public class State {
 		return "State [buildings=" + buildings + ", units=" + units + ", resources=" + resources + "]";
 	}
 
+	public void addResources(Resources resourcesToAdd) {
+		int crystal = resources.getCrystal() + resourcesToAdd.getCrystal();
+		int gas = resources.getGas() + resourcesToAdd.getGas();
+		resources.setCrystal(crystal);
+		resources.setGas(gas);
+	}
+
 }

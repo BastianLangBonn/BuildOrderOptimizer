@@ -16,12 +16,12 @@ public class Resources {
 		this.gas = gas;
 	}
 
-	public int getCristal() {
+	public int getCrystal() {
 		return crystal;
 	}
 
-	public void setCristal(int cristal) {
-		this.crystal = cristal;
+	public void setCrystal(int crystal) {
+		this.crystal = crystal;
 	}
 
 	public int getGas() {
